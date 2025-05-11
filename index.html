@@ -3,186 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ni Yao - Site Reliability Engineer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Cloudflare Web Analytics -->
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN_HERE"}'></script>
-    <!-- End Cloudflare Web Analytics -->
+    <title>Senior Software Engineer & Solution Architect Blog</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f5f6fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #ecf0f1;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        .card a {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .card a:hover {
+            background-color: #2980b9;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: var(--primary-color);
+            color: white;
+            margin-top: 3rem;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="container">
-                <h1>Ni Yao</h1>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+        <div class="container">
+            <h1>Senior Software Engineer & Solution Architect Blog</h1>
+            <p class="subtitle">Insights into Real-time Payment Systems and Cloud Architecture</p>
+        </div>
     </header>
 
-    <main>
-        <section id="about" class="section">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <div class="profile-image">
-                        <img src="images/headshot-70.jpg" alt="Ni Yao - Site Reliability Engineer" />
-                    </div>
-                    <div class="about-text">
-                        <h3>Site Reliability Engineer</h3>
-                        <p>Deliver reliability for applications through proactive SRE practices in architecture design, resilience engineering, observability, automated recovery, and CI/CD.</p>
-                    </div>
-                </div>
+    <main class="container">
+        <h2 class="section-title">Technical Capabilities</h2>
+        <div class="content-grid">
+            <div class="card">
+                <h2>Technical Arsenal</h2>
+                <p>Explore the comprehensive technical capabilities required for modern payment systems and cloud infrastructure.</p>
+                <a href="technical-capabilities.html">Read More</a>
             </div>
-        </section>
-
-        <section id="experience" class="section">
-            <div class="container">
-                <h2>Experience</h2>
-                <div class="timeline">
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3>JP Morgan Chase</h3>
-                            <span class="role">Site Reliability Engineer</span>
-                            <span class="duration">Dec 2021 - Present</span>
-                        </div>
-                        <ul class="experience-details">
-                            <li>Engineering research, consultation, and implementation of resiliency best practices for Kubernetes, Kafka, databases, certificate automation, and CI/CD across a half dozen Payments services.</li>
-                            <li>Implemented observability for B2B Payments applications with daily cash flow exceeding 100 billion USD, reducing mean time to diagnosis by 10x.</li>
-                            <li>Built Grafana dashboards for performance and application monitoring.</li>
-                            <li>Developed production automations to auto-recover from incidents as well as automations to reduce toil.</li>
-                            <li>Conducted incident RCAs for applications processing 100 billion USD daily.</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3>Con Edison</h3>
-                            <span class="role">Site Reliability Engineer</span>
-                            <span class="duration">Feb 2019 – Dec 2021</span>
-                        </div>
-                        <ul class="experience-details">
-                            <li>Architected a high availability infrastructure for an MFT application handling 80% of company-wide data transactions with external vendors.</li>
-                            <li>Reduced MTTR (Mean Time to Resolve) by 80% through implementation of PagerDuty and runbooks to standardize resolutions for known issues.</li>
-                            <li>Automated a manual monthly task and reduced labor spent by 90%.</li>
-                            <li>Supported four critical applications with an under 1-hour RTO.</li>
-                            <li>Coordinated security upgrades with over 600 external vendors/companies.</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3>Con Edison</h3>
-                            <span class="role">IBM Sterling Integration Analyst</span>
-                            <span class="duration">Jul 2017 - Feb 2019</span>
-                        </div>
-                        <ul class="experience-details">
-                            <li>Developed 15 features for backend stability and front-end ease of use.</li>
-                            <li>Identified and implemented bug fixes reducing downtime by 75%.</li>
-                            <li>Supported a critical application with an under 1-hour RTO.</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="card">
+                <h2>Daily Life</h2>
+                <p>A day in the life of a Senior Software Engineer & Solution Architect working on real-time payment systems.</p>
+                <a href="daily-life.html">Read More</a>
             </div>
-        </section>
-
-        <section id="skills" class="section">
-            <div class="container">
-                <h2>Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Programming Languages</h3>
-                        <ul>
-                            <li>Python</li>
-                            <li>Java</li>
-                            <li>C++</li>
-                            <li>SQL</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Core Skills</h3>
-                        <ul>
-                            <li>Infrastructure Resiliency</li>
-                            <li>Performance Monitoring</li>
-                            <li>Observability Dashboarding</li>
-                            <li>Monitoring and Alerting</li>
-                            <li>Production Automation</li>
-                            <li>Kubernetes Containerization</li>
-                            <li>Pipeline Deployment</li>
-                            <li>RCA and Post-Mortem</li>
-                            <li>Cyber Security (SSL)</li>
-                            <li>Git</li>
-                            <li>Agile Development</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Tools & Technologies</h3>
-                        <ul>
-                            <li>AWS Cloud Services</li>
-                            <li>Datadog / Dynatrace / Splunk</li>
-                            <li>Grafana / Prometheus</li>
-                            <li>Bitbucket / GitHub</li>
-                            <li>Terraform</li>
-                            <li>Jenkins / Spinnaker</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="card">
+                <h2>Technical Leadership</h2>
+                <p>Discover the art of technical leadership beyond code and architecture.</p>
+                <a href="technical-leadership.html">Read More</a>
             </div>
-        </section>
+        </div>
 
-        <section id="education" class="section">
-            <div class="container">
-                <h2>Education</h2>
-                <div class="education-content">
-                    <div class="education-item">
-                        <h3>The City College of New York, The Grove School of Engineering</h3>
-                        <p>B.A. in Computer Engineering, 2016</p>
-                    </div>
-                </div>
+        <h2 class="section-title">Detailed Technical Guides</h2>
+        <div class="content-grid">
+            <div class="card">
+                <h2>AWS Infrastructure</h2>
+                <p>Deep dive into AWS infrastructure management and optimization for payment systems.</p>
+                <a href="aws-infrastructure.html">Read More</a>
             </div>
-        </section>
-
-        <section id="certifications" class="section">
-            <div class="container">
-                <h2>Certifications</h2>
-                <div class="certifications-content">
-                    <div class="certification-item">
-                        <h3>AWS Solutions Architect Associate</h3>
-                    </div>
-                </div>
+            <div class="card">
+                <h2>Payment Processing</h2>
+                <p>Comprehensive guide to implementing secure and scalable payment processing systems.</p>
+                <a href="payment-processing.html">Read More</a>
             </div>
-        </section>
-
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Contact</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <p>Location: New York, NY</p>
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/in/niyao/" target="_blank">LinkedIn</a>
-                            <a href="https://github.com/Nicklaus-yao" target="_blank">GitHub</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="card">
+                <h2>Security & Compliance</h2>
+                <p>Essential security measures and compliance requirements for financial systems.</p>
+                <a href="security-compliance.html">Read More</a>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Ni Yao. All rights reserved.</p>
+            <p>&copy; 2024 Senior Software Engineer & Solution Architect Blog. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html> 
