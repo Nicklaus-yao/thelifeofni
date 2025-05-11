@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Software Engineer & Solution Architect Blog</title>
+    <title>Ni Yao - Resume</title>
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -35,130 +35,184 @@
         header {
             background-color: var(--primary-color);
             color: white;
-            padding: 2rem 0;
-            text-align: center;
-            margin-bottom: 3rem;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .subtitle {
-            font-size: 1.2rem;
-            color: #ecf0f1;
+        .nav-links {
+            display: flex;
+            gap: 1rem;
         }
 
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: all 0.3s ease;
         }
 
-        .card {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card h2 {
+        .nav-link:hover {
+            background-color: white;
             color: var(--primary-color);
-            margin-bottom: 1rem;
         }
 
-        .card p {
-            margin-bottom: 1.5rem;
+        .resume {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-info h1 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-info p {
             color: #666;
         }
 
-        .card a {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-item h3, .education-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .date {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style: none;
+        }
+
+        .skill-item {
             background-color: var(--secondary-color);
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .card a:hover {
-            background-color: #2980b9;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
         }
 
         footer {
             text-align: center;
             padding: 2rem 0;
-            background-color: var(--primary-color);
-            color: white;
             margin-top: 3rem;
+            color: #666;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Senior Software Engineer & Solution Architect Blog</h1>
-            <p class="subtitle">Insights into Real-time Payment Systems and Cloud Architecture</p>
+        <div class="nav-container">
+            <h1>Ni Yao</h1>
+            <nav class="nav-links">
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="blog/index.html" class="nav-link">Blog</a>
+            </nav>
         </div>
     </header>
 
     <main class="container">
-        <h2 class="section-title">Technical Capabilities</h2>
-        <div class="content-grid">
-            <div class="card">
-                <h2>Technical Arsenal</h2>
-                <p>Explore the comprehensive technical capabilities required for modern payment systems and cloud infrastructure.</p>
-                <a href="technical-capabilities.html">Read More</a>
-            </div>
-            <div class="card">
-                <h2>Daily Life</h2>
-                <p>A day in the life of a Senior Software Engineer & Solution Architect working on real-time payment systems.</p>
-                <a href="daily-life.html">Read More</a>
-            </div>
-            <div class="card">
-                <h2>Technical Leadership</h2>
-                <p>Discover the art of technical leadership beyond code and architecture.</p>
-                <a href="technical-leadership.html">Read More</a>
-            </div>
-        </div>
+        <div class="resume">
+            <section class="profile">
+                <img src="profile.jpg" alt="Ni Yao" class="profile-image">
+                <div class="profile-info">
+                    <h1>Ni Yao</h1>
+                    <p>Senior Software Engineer & Solution Architect</p>
+                    <p>Specializing in Real-time Payment Systems and Cloud Architecture</p>
+                </div>
+            </section>
 
-        <h2 class="section-title">Detailed Technical Guides</h2>
-        <div class="content-grid">
-            <div class="card">
-                <h2>AWS Infrastructure</h2>
-                <p>Deep dive into AWS infrastructure management and optimization for payment systems.</p>
-                <a href="aws-infrastructure.html">Read More</a>
-            </div>
-            <div class="card">
-                <h2>Payment Processing</h2>
-                <p>Comprehensive guide to implementing secure and scalable payment processing systems.</p>
-                <a href="payment-processing.html">Read More</a>
-            </div>
-            <div class="card">
-                <h2>Security & Compliance</h2>
-                <p>Essential security measures and compliance requirements for financial systems.</p>
-                <a href="security-compliance.html">Read More</a>
-            </div>
+            <section id="experience">
+                <h2>Professional Experience</h2>
+                <div class="experience-item">
+                    <h3>Senior Software Engineer & Solution Architect</h3>
+                    <p class="date">2020 - Present</p>
+                    <ul>
+                        <li>Led the design and implementation of real-time payment processing systems on AWS</li>
+                        <li>Architected scalable microservices for high-volume transaction processing</li>
+                        <li>Implemented security best practices and compliance measures for financial systems</li>
+                        <li>Mentored junior developers and conducted code reviews</li>
+                    </ul>
+                </div>
+                <!-- Add more experience items as needed -->
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>Master of Science in Computer Science</h3>
+                    <p class="date">2018 - 2020</p>
+                    <p>Specialized in Distributed Systems and Cloud Computing</p>
+                </div>
+                <!-- Add more education items as needed -->
+            </section>
+
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <ul class="skills-list">
+                    <li class="skill-item">AWS</li>
+                    <li class="skill-item">Microservices</li>
+                    <li class="skill-item">Payment Systems</li>
+                    <li class="skill-item">Cloud Architecture</li>
+                    <li class="skill-item">Security</li>
+                    <li class="skill-item">System Design</li>
+                    <li class="skill-item">Leadership</li>
+                </ul>
+            </section>
         </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Senior Software Engineer & Solution Architect Blog. All rights reserved.</p>
+            <p>&copy; 2024 Ni Yao. All rights reserved.</p>
         </div>
     </footer>
 </body>
