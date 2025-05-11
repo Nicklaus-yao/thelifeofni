@@ -17,7 +17,7 @@ Technical Expertise
    - Experience with real-time payment rails (RTP, FedNow, SEPA Instant)
    - Understanding of payment security and compliance requirements
    - Familiarity with payment gateway integrations
-   - Experience with transaction processing and reconciliation
+   - Experience with transaction processing and reconciliation.
 
 3. System Architecture
    - Microservices architecture design and implementation
