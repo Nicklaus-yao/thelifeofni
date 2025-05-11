@@ -286,6 +286,36 @@ h3 {
     color: var(--background-color);
 }
 
+/* Blog Section */
+.blog-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.blog-info {
+    text-align: center;
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.blog-info p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.blog-link-container {
+    display: flex;
+    justify-content: center;
+}
+
+.blog-link-container .blog-link {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+}
+
 /* Footer */
 footer {
     background-color: var(--text-color);
