@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS EventBridge: Event-Driven Architecture Made Simple</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../blog/index.html">Blog</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="blog-post">
+            <h1>AWS EventBridge: Event-Driven Architecture Made Simple</h1>
+            <div class="post-meta">
+                <span class="date">May 15, 2024</span>
+                <span class="author">By Nicklaus Yao</span>
+            </div>
+
+            <section class="executive-summary">
+                <h2>Executive Summary</h2>
+                <p>Amazon EventBridge is a serverless event bus service that makes it easy to connect applications using real-time data flows. Think of it as a central nervous system for your cloud applications, allowing different parts of your system to communicate with each other without being tightly coupled.</p>
+                
+                <p>For business leaders, EventBridge provides:</p>
+                <ul>
+                    <li>Simplified application integration</li>
+                    <li>Real-time event processing</li>
+                    <li>Reduced operational complexity</li>
+                    <li>Cost-effective event routing</li>
+                </ul>
+            </section>
+
+            <section class="technical-overview">
+                <h2>Technical Overview</h2>
+                <p>EventBridge is a serverless event router that enables event-driven architectures. Key technical features include:</p>
+                <ul>
+                    <li>Event Sources:
+                        <ul>
+                            <li>AWS services (S3, EC2, Lambda, etc.)</li>
+                            <li>Custom applications</li>
+                            <li>Partner services (Datadog, PagerDuty, etc.)</li>
+                            <li>SaaS applications</li>
+                        </ul>
+                    </li>
+                    <li>Event Patterns:
+                        <ul>
+                            <li>JSON-based matching</li>
+                            <li>Content-based filtering</li>
+                            <li>Time-based scheduling</li>
+                        </ul>
+                    </li>
+                    <li>Targets:
+                        <ul>
+                            <li>AWS Lambda functions</li>
+                            <li>Amazon SQS queues</li>
+                            <li>Amazon SNS topics</li>
+                            <li>API Gateway endpoints</li>
+                            <li>Step Functions state machines</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="cost-comparison">
+                <h2>Cost Comparison</h2>
+                <p>Let's compare EventBridge with custom message queues and Google Cloud Pub/Sub:</p>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>AWS EventBridge</th>
+                            <th>Custom Message Queue</th>
+                            <th>Google Cloud Pub/Sub</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Publishing Cost (per million)</td>
+                            <td>$1.00</td>
+                            <td>$0.40 (EC2 + SQS)</td>
+                            <td>$0.40</td>
+                        </tr>
+                        <tr>
+                            <td>Delivery Cost (per million)</td>
+                            <td>$1.00</td>
+                            <td>$0.40 (SQS)</td>
+                            <td>$0.40</td>
+                        </tr>
+                        <tr>
+                            <td>Management Overhead</td>
+                            <td>Fully managed</td>
+                            <td>High (self-managed)</td>
+                            <td>Fully managed</td>
+                        </tr>
+                        <tr>
+                            <td>Integration Complexity</td>
+                            <td>Low</td>
+                            <td>High</td>
+                            <td>Medium</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>Cost Savings Example (1M events per month):</p>
+                <ul>
+                    <li>Custom Solution: ($0.40 + $0.40) × 1M = $800/month + $2,000 ops</li>
+                    <li>EventBridge: ($1.00 + $1.00) × 1M = $2,000/month</li>
+                    <li>Total Cost Comparison: $2,800 vs $2,000</li>
+                    <li>Additional Benefits: Reduced complexity, faster time to market</li>
+                </ul>
+            </section>
+
+            <section class="risks-considerations">
+                <h2>Risks and Considerations</h2>
+                <h3>Potential Risks:</h3>
+                <ul>
+                    <li>Cost Management: High event volumes can be expensive</li>
+                    <li>Event Ordering: No guaranteed ordering across partitions</li>
+                    <li>Message Size: 256KB limit per event</li>
+                    <li>Error Handling: Requires proper dead-letter queues</li>
+                </ul>
+
+                <h3>Mitigation Strategies:</h3>
+                <ul>
+                    <li>Implement event filtering to reduce volume</li>
+                    <li>Use appropriate event patterns</li>
+                    <li>Design for idempotency</li>
+                    <li>Implement proper error handling and retries</li>
+                    <li>Monitor event volumes and costs</li>
+                </ul>
+            </section>
+
+            <section class="resources">
+                <h2>Additional Resources</h2>
+                <ul>
+                    <li><a href="https://aws.amazon.com/eventbridge/" target="_blank">AWS EventBridge Official Documentation</a></li>
+                    <li><a href="https://aws.amazon.com/eventbridge/pricing/" target="_blank">EventBridge Pricing</a></li>
+                    <li><a href="https://aws.amazon.com/eventbridge/features/" target="_blank">EventBridge Features</a></li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nicklaus Yao. All rights reserved.</p>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS EC2: The Foundation of Cloud Computing</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../blog/index.html">Blog</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="blog-post">
+            <h1>AWS EC2: The Foundation of Cloud Computing</h1>
+            <div class="post-meta">
+                <span class="date">May 15, 2024</span>
+                <span class="author">By Nicklaus Yao</span>
+            </div>
+
+            <section class="executive-summary">
+                <h2>Executive Summary</h2>
+                <p>AWS Elastic Compute Cloud (EC2) is a fundamental cloud computing service that provides resizable compute capacity in the cloud. Think of it as having a virtual computer that you can start, stop, and configure according to your needs, without having to buy and maintain physical hardware.</p>
+                
+                <p>For business leaders, EC2 offers:</p>
+                <ul>
+                    <li>Pay-as-you-go pricing model, eliminating upfront hardware costs</li>
+                    <li>Instant scalability to handle varying workloads</li>
+                    <li>Global infrastructure deployment</li>
+                    <li>Reduced operational overhead</li>
+                </ul>
+            </section>
+
+            <section class="technical-overview">
+                <h2>Technical Overview</h2>
+                <p>EC2 provides virtual machines (instances) that run on AWS's infrastructure. Each instance is a virtual server with:</p>
+                <ul>
+                    <li>CPU (vCPU) allocation</li>
+                    <li>Memory (RAM)</li>
+                    <li>Storage (instance store and/or EBS volumes)</li>
+                    <li>Networking capabilities</li>
+                </ul>
+
+                <p>Key technical features include:</p>
+                <ul>
+                    <li>Multiple instance types optimized for different use cases (compute, memory, storage, etc.)</li>
+                    <li>Amazon Machine Images (AMIs) for pre-configured software stacks</li>
+                    <li>Security groups for network access control</li>
+                    <li>Elastic IP addresses for static IP assignment</li>
+                    <li>Auto Scaling for automatic capacity management</li>
+                </ul>
+            </section>
+
+            <section class="cost-comparison">
+                <h2>Cost Comparison</h2>
+                <p>Let's compare EC2 with traditional on-premises servers and Google Cloud Compute Engine:</p>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>AWS EC2</th>
+                            <th>On-Premises</th>
+                            <th>Google Cloud Compute Engine</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Initial Cost</td>
+                            <td>No upfront cost</td>
+                            <td>High (hardware purchase)</td>
+                            <td>No upfront cost</td>
+                        </tr>
+                        <tr>
+                            <td>Ongoing Costs</td>
+                            <td>Pay per hour/second</td>
+                            <td>Maintenance, power, cooling</td>
+                            <td>Pay per hour/second</td>
+                        </tr>
+                        <tr>
+                            <td>Scaling Cost</td>
+                            <td>Linear (pay for what you use)</td>
+                            <td>High (new hardware needed)</td>
+                            <td>Linear (pay for what you use)</td>
+                        </tr>
+                        <tr>
+                            <td>Maintenance Cost</td>
+                            <td>Included in service</td>
+                            <td>High (staff, parts)</td>
+                            <td>Included in service</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>Cost Savings Example:</p>
+                <ul>
+                    <li>On-Premises: $10,000 server + $2,000/year maintenance + $1,000/year power = $13,000 first year</li>
+                    <li>EC2: t3.large instance (2 vCPU, 8GB RAM) = ~$70/month = $840/year</li>
+                    <li>Potential first-year savings: ~$12,160</li>
+                </ul>
+            </section>
+
+            <section class="risks-considerations">
+                <h2>Risks and Considerations</h2>
+                <h3>Potential Risks:</h3>
+                <ul>
+                    <li>Cost Management: Without proper monitoring, costs can spiral if instances are left running</li>
+                    <li>Performance: Shared infrastructure can lead to "noisy neighbor" issues</li>
+                    <li>Vendor Lock-in: AWS-specific features may make migration difficult</li>
+                    <li>Security: Misconfigured security groups can expose instances</li>
+                </ul>
+
+                <h3>Mitigation Strategies:</h3>
+                <ul>
+                    <li>Implement cost monitoring and budgeting tools</li>
+                    <li>Use reserved instances for predictable workloads</li>
+                    <li>Follow AWS Well-Architected Framework</li>
+                    <li>Implement proper security controls and monitoring</li>
+                </ul>
+            </section>
+
+            <section class="resources">
+                <h2>Additional Resources</h2>
+                <ul>
+                    <li><a href="https://aws.amazon.com/ec2/" target="_blank">AWS EC2 Official Documentation</a></li>
+                    <li><a href="https://aws.amazon.com/ec2/pricing/" target="_blank">EC2 Pricing</a></li>
+                    <li><a href="https://aws.amazon.com/architecture/well-architected/" target="_blank">AWS Well-Architected Framework</a></li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nicklaus Yao. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
