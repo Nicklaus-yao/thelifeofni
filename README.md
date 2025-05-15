@@ -7,7 +7,7 @@ This is a static website showcasing my professional resume. The website is built
 ### Website Overview
 - Domain: thelifeofni.com
 - Hosting: Cloudflare Pages
-- Repository: https://github.com/Nicklaus-yao/thelifeofni
+- Repository: https://github.com/Ni-yao/thelifeofni
 - Owner: Ni Yao (niyao.nyc@gmail.com)
 
 ### Key Components
@@ -19,7 +19,7 @@ This is a static website showcasing my professional resume. The website is built
 
 2. **Social Links**
    - LinkedIn: https://www.linkedin.com/in/niyao/
-   - GitHub: https://github.com/Nicklaus-yao
+   - GitHub: https://github.com/Ni-yao
 
 3. **File Structure**
    - `index.html`: Main website content
