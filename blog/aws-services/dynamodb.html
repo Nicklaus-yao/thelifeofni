@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS DynamoDB: The NoSQL Database for Modern Applications</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../blog/index.html">Blog</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="blog-post">
+            <h1>AWS DynamoDB: The NoSQL Database for Modern Applications</h1>
+            <div class="post-meta">
+                <span class="date">May 15, 2024</span>
+                <span class="author">By Nicklaus Yao</span>
+            </div>
+
+            <section class="executive-summary">
+                <h2>Executive Summary</h2>
+                <p>Amazon DynamoDB is a fully managed NoSQL database service that provides single-digit millisecond performance at any scale. Think of it as a highly scalable, flexible database that automatically handles the heavy lifting of database administration, maintenance, and scaling.</p>
+                
+                <p>For business leaders, DynamoDB offers:</p>
+                <ul>
+                    <li>Predictable performance at any scale</li>
+                    <li>Pay-per-request pricing model</li>
+                    <li>Built-in high availability and durability</li>
+                    <li>Zero database administration overhead</li>
+                </ul>
+            </section>
+
+            <section class="technical-overview">
+                <h2>Technical Overview</h2>
+                <p>DynamoDB is a key-value and document database that delivers single-digit millisecond performance at any scale. Key technical features include:</p>
+                <ul>
+                    <li>Data Model:
+                        <ul>
+                            <li>Tables: Collections of items</li>
+                            <li>Items: Collections of attributes</li>
+                            <li>Primary Key: Partition key or partition key + sort key</li>
+                        </ul>
+                    </li>
+                    <li>Capacity Modes:
+                        <ul>
+                            <li>On-demand: Pay per request</li>
+                            <li>Provisioned: Reserved capacity</li>
+                        </ul>
+                    </li>
+                    <li>Global Tables for multi-region replication</li>
+                    <li>Point-in-time recovery</li>
+                    <li>DynamoDB Streams for change data capture</li>
+                    <li>Transactions support</li>
+                </ul>
+            </section>
+
+            <section class="cost-comparison">
+                <h2>Cost Comparison</h2>
+                <p>Let's compare DynamoDB with MongoDB Atlas and traditional relational databases:</p>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>AWS DynamoDB</th>
+                            <th>MongoDB Atlas</th>
+                            <th>Traditional RDBMS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Write Cost (per million)</td>
+                            <td>$1.25 (on-demand)</td>
+                            <td>$0.90 (M10 cluster)</td>
+                            <td>N/A (server cost)</td>
+                        </tr>
+                        <tr>
+                            <td>Read Cost (per million)</td>
+                            <td>$0.25 (on-demand)</td>
+                            <td>$0.15 (M10 cluster)</td>
+                            <td>N/A (server cost)</td>
+                        </tr>
+                        <tr>
+                            <td>Storage Cost (per GB/month)</td>
+                            <td>$0.25</td>
+                            <td>$0.10</td>
+                            <td>$0.50-1.00</td>
+                        </tr>
+                        <tr>
+                            <td>Administration</td>
+                            <td>Fully managed</td>
+                            <td>Fully managed</td>
+                            <td>Manual</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>Cost Savings Example (1M writes, 5M reads per month):</p>
+                <ul>
+                    <li>Traditional RDBMS: $2,000/month server + $5,000 DBA = $7,000/month</li>
+                    <li>DynamoDB: (1M × $1.25) + (5M × $0.25) = $2.5M/month</li>
+                    <li>Potential monthly savings: ~$4,500</li>
+                </ul>
+            </section>
+
+            <section class="risks-considerations">
+                <h2>Risks and Considerations</h2>
+                <h3>Potential Risks:</h3>
+                <ul>
+                    <li>Cost Management: On-demand pricing can be unpredictable</li>
+                    <li>Data Modeling: Requires careful planning for access patterns</li>
+                    <li>Query Limitations: No complex joins or aggregations</li>
+                    <li>Cold Start: Provisioned capacity needs warm-up time</li>
+                </ul>
+
+                <h3>Mitigation Strategies:</h3>
+                <ul>
+                    <li>Use provisioned capacity for predictable workloads</li>
+                    <li>Design tables based on access patterns</li>
+                    <li>Implement caching for frequently accessed data</li>
+                    <li>Use DynamoDB Accelerator (DAX) for read-heavy workloads</li>
+                    <li>Monitor and optimize capacity units</li>
+                </ul>
+            </section>
+
+            <section class="resources">
+                <h2>Additional Resources</h2>
+                <ul>
+                    <li><a href="https://aws.amazon.com/dynamodb/" target="_blank">AWS DynamoDB Official Documentation</a></li>
+                    <li><a href="https://aws.amazon.com/dynamodb/pricing/" target="_blank">DynamoDB Pricing</a></li>
+                    <li><a href="https://aws.amazon.com/dynamodb/features/" target="_blank">DynamoDB Features</a></li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nicklaus Yao. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
