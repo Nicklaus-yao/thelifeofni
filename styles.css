@@ -35,36 +35,59 @@ header {
     z-index: 1000;
 }
 
-nav {
-    padding: 1rem 0;
-}
-
-nav .container {
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav h1 {
+.nav-container .logo {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    margin-right: 2rem;
 }
 
-nav ul {
+.nav-container .logo a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-container .logo a:hover {
+    color: var(--secondary-color);
+}
+
+.nav-container nav {
+    padding: 0;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-container nav ul {
     display: flex;
     list-style: none;
     gap: 2rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
 }
 
-nav a {
+.nav-container nav a {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
-nav a:hover {
+.nav-container nav a:hover {
     color: var(--primary-color);
 }
 
