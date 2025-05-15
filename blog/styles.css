@@ -7,6 +7,7 @@
     --card-bg: #ffffff;
     --border-radius: 8px;
     --spacing: 1rem;
+    --transition-speed: 0.3s;
 }
 
 * {
@@ -15,11 +16,21 @@
     box-sizing: border-box;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--light-bg);
+    font-size: clamp(1rem, 1vw + 0.75rem, 1.125rem);
 }
 
 .container {
@@ -57,12 +68,15 @@ header {
     padding: 0.5rem 1rem;
     border: 1px solid white;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    transition: all var(--transition-speed) ease;
 }
 
-.back-link:hover {
+.back-link:hover,
+.back-link:focus-visible {
     background-color: white;
     color: var(--primary-color);
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
 }
 
 .article {
@@ -162,11 +176,16 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color var(--transition-speed) ease;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus-visible {
     color: var(--secondary-color);
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
 }
 
 main {
@@ -203,10 +222,12 @@ h1 {
     border-radius: var(--border-radius);
     padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform var(--transition-speed) ease;
+    will-change: transform;
 }
 
-.blog-card:hover {
+.blog-card:hover,
+.blog-card:focus-within {
     transform: translateY(-5px);
 }
 
@@ -254,5 +275,32 @@ h1 {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .article {
+        padding: 1.5rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    .article {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    nav, 
+    .back-link,
+    footer {
+        display: none;
     }
 } 
