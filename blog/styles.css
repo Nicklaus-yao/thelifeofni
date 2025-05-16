@@ -136,26 +136,42 @@ header {
     text-decoration: underline;
 }
 
+/* Comparison Table Styles */
 .comparison-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1.5rem 0;
+    margin: 2rem 0;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .comparison-table th,
 .comparison-table td {
-    padding: 0.75rem;
-    border: 1px solid #ddd;
+    padding: 1rem;
     text-align: left;
+    border: 1px solid #e1e1e1;
 }
 
 .comparison-table th {
     background-color: var(--primary-color);
     color: white;
+    font-weight: 600;
 }
 
 .comparison-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: var(--light-bg);
+}
+
+.comparison-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+    .comparison-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
 
 footer {
@@ -303,4 +319,37 @@ h1 {
     footer {
         display: none;
     }
+}
+
+/* Code Block Styles */
+.code-block {
+    background-color: #f8f9fa;
+    border: 1px solid #e1e1e1;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Architecture Diagram Styles */
+.architecture-diagram {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.architecture-diagram pre {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    white-space: pre;
 } 
