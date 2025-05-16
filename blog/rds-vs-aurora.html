@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS RDS vs Aurora: A Comprehensive Comparison - Senior Software Engineer Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Senior Software Engineer Blog</a>
+            <a href="../index.html" class="back-link">Back to Home</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <article class="article">
+            <h1>AWS RDS vs Aurora: A Comprehensive Comparison</h1>
+            
+            <h2>Executive Summary</h2>
+            <p>
+                AWS offers two primary managed database services: Amazon RDS (Relational Database Service) and Amazon Aurora. 
+                While both services provide managed relational databases, they serve different needs in terms of performance, 
+                scalability, and cost. This comparison will help you make an informed decision based on your specific requirements.
+            </p>
+
+            <h2>What is Amazon RDS?</h2>
+            <p>
+                Amazon RDS is a managed relational database service that makes it easy to set up, operate, and scale relational 
+                databases in the cloud. It provides cost-efficient and resizable capacity while automating time-consuming 
+                administration tasks such as hardware provisioning, database setup, patching, and backups.
+            </p>
+
+            <h2>What is Amazon Aurora?</h2>
+            <p>
+                Amazon Aurora is a MySQL and PostgreSQL-compatible relational database built for the cloud, that combines the 
+                performance and availability of traditional enterprise databases with the simplicity and cost-effectiveness 
+                of open-source databases. It delivers up to five times the throughput of standard MySQL and up to three times 
+                the throughput of standard PostgreSQL.
+            </p>
+
+            <h2>Technical Deep Dive</h2>
+            
+            <h3>Amazon RDS</h3>
+            <p>
+                RDS is a managed service that supports six popular database engines:
+            </p>
+            <ul>
+                <li>MySQL</li>
+                <li>PostgreSQL</li>
+                <li>MariaDB</li>
+                <li>Oracle</li>
+                <li>Microsoft SQL Server</li>
+                <li>Amazon Aurora</li>
+            </ul>
+
+            <h3>Amazon Aurora</h3>
+            <p>
+                Aurora is a cloud-native database engine that's compatible with MySQL and PostgreSQL. It uses a distributed, 
+                fault-tolerant, self-healing storage system that auto-scales up to 128TB per database instance.
+            </p>
+
+            <h2>Feature Comparison</h2>
+            <table class="comparison-table">
+                <tr>
+                    <th>Feature</th>
+                    <th>RDS</th>
+                    <th>Aurora</th>
+                </tr>
+                <tr>
+                    <td>Database Engines</td>
+                    <td>MySQL, PostgreSQL, MariaDB, Oracle, SQL Server</td>
+                    <td>MySQL, PostgreSQL</td>
+                </tr>
+                <tr>
+                    <td>Storage Type</td>
+                    <td>EBS (Elastic Block Store)</td>
+                    <td>Custom distributed storage</td>
+                </tr>
+                <tr>
+                    <td>Maximum Storage</td>
+                    <td>64TB</td>
+                    <td>128TB</td>
+                </tr>
+                <tr>
+                    <td>Read Replicas</td>
+                    <td>Up to 5</td>
+                    <td>Up to 15</td>
+                </tr>
+                <tr>
+                    <td>Backup Retention</td>
+                    <td>Up to 35 days</td>
+                    <td>Up to 35 days</td>
+                </tr>
+                <tr>
+                    <td>Point-in-Time Recovery</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Multi-AZ Deployment</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </table>
+
+            <h2>Cost Comparison</h2>
+            <table class="comparison-table">
+                <tr>
+                    <th>Cost Component</th>
+                    <th>RDS</th>
+                    <th>Aurora</th>
+                </tr>
+                <tr>
+                    <td>Instance Cost</td>
+                    <td>Lower</td>
+                    <td>Higher</td>
+                </tr>
+                <tr>
+                    <td>Storage Cost</td>
+                    <td>Higher</td>
+                    <td>Lower</td>
+                </tr>
+                <tr>
+                    <td>I/O Cost</td>
+                    <td>Per I/O request</td>
+                    <td>Included in storage</td>
+                </tr>
+                <tr>
+                    <td>Backup Storage</td>
+                    <td>Beyond free tier</td>
+                    <td>Beyond free tier</td>
+                </tr>
+            </table>
+
+            <h2>Pros and Cons</h2>
+
+            <h3>Amazon RDS Pros</h3>
+            <ul>
+                <li>Supports multiple database engines</li>
+                <li>Lower instance costs</li>
+                <li>Simpler architecture</li>
+                <li>Better for smaller workloads</li>
+                <li>More flexible instance types</li>
+            </ul>
+
+            <h3>Amazon RDS Cons</h3>
+            <ul>
+                <li>Lower performance compared to Aurora</li>
+                <li>Limited scalability</li>
+                <li>Higher storage costs</li>
+                <li>More I/O operations needed</li>
+            </ul>
+
+            <h3>Amazon Aurora Pros</h3>
+            <ul>
+                <li>Higher performance (up to 5x MySQL, 3x PostgreSQL)</li>
+                <li>Better scalability</li>
+                <li>Lower storage costs</li>
+                <li>More read replicas</li>
+                <li>Better fault tolerance</li>
+            </ul>
+
+            <h3>Amazon Aurora Cons</h3>
+            <ul>
+                <li>Higher instance costs</li>
+                <li>Limited to MySQL and PostgreSQL</li>
+                <li>More complex architecture</li>
+                <li>May be overkill for smaller workloads</li>
+            </ul>
+
+            <h2>Risks and Considerations</h2>
+
+            <h3>Amazon RDS Risks</h3>
+            <ul>
+                <li>Performance limitations for high-throughput applications</li>
+                <li>Storage I/O bottlenecks</li>
+                <li>Limited read scaling capabilities</li>
+                <li>Potential for higher operational costs at scale</li>
+            </ul>
+
+            <h3>Amazon Aurora Risks</h3>
+            <ul>
+                <li>Higher initial costs</li>
+                <li>Complexity in management</li>
+                <li>Potential for over-provisioning</li>
+                <li>Limited database engine options</li>
+            </ul>
+
+            <h2>Use Case Recommendations</h2>
+            <p>
+                Choose RDS when:
+            </p>
+            <ul>
+                <li>You need specific database engines (Oracle, SQL Server)</li>
+                <li>Your workload is moderate</li>
+                <li>Cost is a primary concern</li>
+                <li>You need simpler architecture</li>
+            </ul>
+
+            <p>
+                Choose Aurora when:
+            </p>
+            <ul>
+                <li>You need high performance</li>
+                <li>Your workload is large or growing</li>
+                <li>You need better scalability</li>
+                <li>You're using MySQL or PostgreSQL</li>
+            </ul>
+
+            <h2>Additional Resources</h2>
+            <ul>
+                <li><a href="https://aws.amazon.com/rds/" target="_blank">Amazon RDS Documentation</a></li>
+                <li><a href="https://aws.amazon.com/aurora/" target="_blank">Amazon Aurora Documentation</a></li>
+                <li><a href="https://aws.amazon.com/rds/pricing/" target="_blank">RDS Pricing</a></li>
+                <li><a href="https://aws.amazon.com/aurora/pricing/" target="_blank">Aurora Pricing</a></li>
+            </ul>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Senior Software Engineer Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
